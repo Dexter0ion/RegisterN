@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>报名表</title>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/1.css">
+    <script type="text/javascript" language="JavaScript" src="../../javascripts/3.js"></script>
+</head>
+
+<body>
+
+    <!-- POST test -->
+    <!--
+    <form action='/test' method='post'>
+        <input type='text' name='name' value='fred'>
+        <input type='text' name='tel' value='0926xxx572'>
+        <input type='submit' value='Submit'>
+    </form>
+    -->
+    <form id="poi" style="background:url(../../images/5.jpg)" action='/test2' method='post'>
+        <h1>报名表</h1>
+        <div class="form-group">
+            <label class="zxc">姓名</label>
+            <input class="qwe" name='memberName' type="text" onclick="gfd(this)" placeholder="姓名">
+        </div>
+        <div class="form-group">
+            <label class="zxc">学号</label>
+            <input class="qwe" name='memberSchoolNumber' type="text" placeholder="201*110***">
+        </div>
+        <div class="form-group">
+            <label class="zxc">班级</label>
+            <input class="qwe" name='memberClassName' type="text" placeholder="201*级*班">
+        </div>
+        <div class="form-group">
+            <label class="zxc">电话</label>
+            <input class="qwe" name='memberTel' type="text" placeholder="12345678900">
+        </div>
+        <div class="form-group">
+            <label class="zxc">QQ</label>
+            <input class="qwe1"  name ='memberQQ' type="text" placeholder="12345678900">
+        </div>
+        <div class="form-group">
+            <label class="zxc">性别</label>
+            <input type="radio" class="nji1" name="memberSex" value="男" checked>boy
+            <input type="radio" name="memberSex" class="nji" value="女">girl
+        </div>
+        <div class="form-group">
+            <label class="zxc">选组</label>
+            <select name="memberTeam" class="vcb">
+                <option value="编程组">编程组</option>
+                <option value="美工组">美工组</option>
+                <option value="商务组">商务组</option>
+                <option value="教师教育组">教师教育组</option>
+            </div>
+        </div>
+        <div class="form-group"> 
+               <textarea class="qwe2" type="text" name="memberMessage" placeholder="谈谈对即将开始的大一生活的想法"></textarea>   
+        </div>
+ 
+        <button class="lkj" type="submit" onclick="openWindow()">提交</button>
+
+	</form>
+</body>
+</html>

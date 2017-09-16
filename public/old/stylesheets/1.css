@@ -1,0 +1,76 @@
+#poi{
+	margin: auto;
+	height: 1468px;
+	width:1000px;
+	
+}
+#poi h1{
+	margin-left: 410px;
+	padding-top: 210px;
+	font-size: 48px;
+}
+.form-group{
+	margin: auto;
+	width: 600px;
+	height: 65px;
+}
+.zxc{
+	margin-top: 10px;
+	margin-left: 160px;
+	float: left;
+	font: "微软雅黑";
+	font-size: 16px;
+}
+.form-control{
+	width: 300px;
+	height: 50px;
+}
+.nji{
+	font-size: 16px;
+	margin-left: 30px;
+}
+.nji1{
+	margin-top: 10px;
+	font-size: 16px;
+	margin-left: 90px;
+}
+.vcb{
+	font-size: 16px;
+	margin-top: 5px;
+	margin-left: 95px;
+}
+.qwe{
+	border: 1px solid black;
+	height:30px;
+	width: 150px;
+	float: left;
+	margin-left: 80px;
+	border-radius: 5px;
+}
+.sdf{
+	border: 1px solid blue;
+	height:52px;
+	width: 300px;
+}
+.qwe1{
+	border: 1px solid black;
+	height:30px;
+	width: 150px;
+	float: left;
+	margin-left: 88px;
+	border-radius: 5px;
+}
+.qwe2{
+	border: 1px solid black;
+	margin-top:80px;
+	font-size: 16px;
+	height:180px;
+	width: 400px;
+	margin-left: 100px;
+	border-radius: 5px;
+}
+.lkj{
+	margin-top: 350px;
+	margin-left: 460px;
+	font-size: 24px;
+}
