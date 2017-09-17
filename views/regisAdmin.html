@@ -8,20 +8,42 @@
     <!--
     <link rel="stylesheet" type="text/css" href="../../stylesheets/solarstyle.css">
     -->
-
+    <link href="../../css/solar.css" rel="stylesheet" type="text/css" media="all" />
     <title>Document</title>
 </head>
 
-<body>
+<body style = "margin:20%">
+
+    <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>您已成功进入管理员界面</strong>
+        <p>管理界面目前包含功能模组:下载已报名成员信息表</p>
+        <p>请点击下方按钮下载(PC端效果最佳)</p>
+    </div>
+
+    <div class="progress progress-striped">
+        <div id = "progressbar" class="progress-bar progress-bar-danger" style="width: 0%"></div>
+    </div>
 
     <form id="adminDownloadForm" action='/saveSqlExcel' method='post'>
 
-        <input type='submit' value='下载Excel表格'>
+        <input type='submit' class="btn btn-danger" value='下载Excel表格' onclick="progressBarChange()">
+
         
-        
+
+
     </form>
-
-
+    <script>
+        var progress =document.getElementById("progressbar");
+        function alertMsg(){
+            alert("aaa");
+        }
+        function progressBarChange(){
+            progressbar.style.width = "100%";
+        }
+    </script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../..js/jquery.min.js"></script>
 </body>
 
 </html>

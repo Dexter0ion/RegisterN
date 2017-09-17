@@ -50,4 +50,10 @@ router.get('/xinan.html', function(req, res) {
 router.get('/yingshi.html', function(req, res) {
   res.render('yingshi', { title: 'Express 路由1' });
 });
+
+router.get('/techsupport.html', function(req, res) {
+  res.render('techsupport', { title: 'Express 路由1' });
+});
+
+
 module.exports = router;

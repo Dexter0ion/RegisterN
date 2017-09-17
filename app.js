@@ -199,7 +199,7 @@ app.post('/saveSqlExcel', function (req, res) {
   var filepath = './public/' + fileName + '.xls';
   var filepath = '/var/lib/mysql/' + fileName + '.xls';
   console.log(filepath);
-  res.download(filepath, '注册信息.xls', function (err) {
+  res.download(filepath, 'RegisterInformation.xls', function (err) {
     if (err) {
       console.log(err);
     }
