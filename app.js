@@ -195,9 +195,17 @@ app.post('/saveSqlExcel', function (req, res) {
     console.log('outfile complete');
 
   });
-  var filepath = `/var/lib/`+ fileName +'.xls';
+  var filepath = './public/' + fileName + '.xls';
+  var filepath = '/var/lib/mysql/' + fileName + '.xls';
   console.log(filepath);
-  res.download(filepath); 
+  res.download(filepath, '注册信息.xls', function (err) {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log('ok');
+    }
+  });
 });
 
 
@@ -205,92 +213,92 @@ app.post('/saveSqlExcel', function (req, res) {
 
 
 
-//获取前台管理员登陆数据
+  //获取前台管理员登陆数据
 
-app.post('/regisadmin', function (req, res) {
-
-
-  //connection.connect();
-  console.log(req.body.adminname);
-  console.log(req.body.adminpassword);
-  var sqlStr = "select * from tblRegisAdmin where adminName='"
-    + req.body.adminname + "' and adminPassword = '"
-    + req.body.adminpassword + "'";
-  console.log(sqlStr);
+  app.post('/regisadmin', function (req, res) {
 
 
-  /*
-  connection.query(sqlStr, function (err, result) {
-      if (err) throw err;
-      
-      if (!sqlStr) {
-        console.log("no such admin");
-      }
-      else if (sqlStr) {
-        console.log("log in successful");
-      }
+    //connection.connect();
+    console.log(req.body.adminname);
+    console.log(req.body.adminpassword);
+    var sqlStr = "select * from tblRegisAdmin where adminName='"
+      + req.body.adminname + "' and adminPassword = '"
+      + req.body.adminpassword + "'";
+    console.log(sqlStr);
 
-    });
-*/
-  connection.query(sqlStr, function (err, result, fields, row) {
-    if (err) {
-      throw err;
-    }
-    if (result.length == 0) {
-      console.log("No such admin account|LOG IN FAILED");
-      res.render('index', { title: 'Express' });
-    }
-    else if (result.length > 0) {
-      console.log("LOG IN Successful");
 
-      //生成excel
-      /*
-      connection.query("select * from tblMemberRegisInfo into outfile './testCC.xls'", function (err, result) {
+    /*
+    connection.query(sqlStr, function (err, result) {
         if (err) throw err;
-        console.log('outfile complete');
+        
+        if (!sqlStr) {
+          console.log("no such admin");
+        }
+        else if (sqlStr) {
+          console.log("log in successful");
+        }
+  
       });
-      */
-      res.render('regisAdmin', { title: 'Express' });
-    }
-    //获得符合查询条件的条数
-    console.log(result.length);
-    console.log(row);
-    //console.log(fields);
+  */
+    connection.query(sqlStr, function (err, result, fields, row) {
+      if (err) {
+        throw err;
+      }
+      if (result.length == 0) {
+        console.log("No such admin account|LOG IN FAILED");
+        res.render('index', { title: 'Express' });
+      }
+      else if (result.length > 0) {
+        console.log("LOG IN Successful");
+
+        //生成excel
+        /*
+        connection.query("select * from tblMemberRegisInfo into outfile './testCC.xls'", function (err, result) {
+          if (err) throw err;
+          console.log('outfile complete');
+        });
+        */
+        res.render('regisAdmin', { title: 'Express' });
+      }
+      //获得符合查询条件的条数
+      console.log(result.length);
+      console.log(row);
+      //console.log(fields);
+    });
+
+
+    console.log('\n');
+
   });
 
 
-  console.log('\n');
-
-});
 
 
+  app.get('/adminGetdata', function (req, res) {
+    res.send('hello world');
+  });
 
+  app.get('/downloadExcel', function (req, res) {
+    res.send('hello world');
+    console.log("downloading");
+  });
+  // catch 404 and forward to error handler
+  app.use(function (req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+  });
 
-app.get('/adminGetdata', function (req, res) {
-  res.send('hello world');
-});
+  // error handler
+  app.use(function (err, req, res, next) {
 
-app.get('/downloadExcel', function (req, res) {
-  res.send('hello world');
-  console.log("downloading");
-});
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-// error handler
-app.use(function (err, req, res, next) {
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
+  });
 
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
-
-module.exports = app;
+  module.exports = app;
