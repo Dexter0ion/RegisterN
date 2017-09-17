@@ -129,6 +129,7 @@ app.post('/regis', function (req, res) {
     memberSex: req.body.memberSex,
     memberTeam: req.body.memberTeam,
     memberMessage: req.body.memberMessage,
+    tblMemberRegisInfocol:0
   };
 
   var schNumCheck = 0;
