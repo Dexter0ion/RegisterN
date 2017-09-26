@@ -713,7 +713,7 @@ h3.w3l_header.w3_agileits_header.two {
 	margin:0 auto;
 }
 .stats{
-	 background: url(../images/banner.jpg) no-repeat 0px -212px;
+	 background: url(../images/shuzi.jpg) no-repeat 0px -212px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -752,7 +752,7 @@ h3.w3l_header.w3_agileits_header.two {
     text-decoration: none;
 }
 .w4-agile-post-img a {
-    background: url(../images/shangwu3.jpg) no-repeat 0px 0px;
+    background: url(../images/cheng.jpg) no-repeat 0px 0px;
     background-size: cover;
     min-height:350px;
     display: block;
@@ -1115,6 +1115,7 @@ button.close {
 	height: 32px;
 	border: none;
 	text-indent: 100%;
+	border-radius: 10px;
 	background: url(../images/arrow-top.png) no-repeat 0px 0px;
 }
 #tohome {
@@ -1122,12 +1123,13 @@ button.close {
 	text-decoration: none;
 	position: fixed;
 	bottom: 20px;
-	right: 1.5%;
+	right: 2%;
 	overflow: hidden;
 	z-index: 999; 
-	width: 37px;
+	width: 32px;
 	height: 31px;
 	border: none;
+	border-radius: 10px;
 	text-indent: 100%;
 	background: url(../images/zhuye.png) no-repeat 0px 0px;
 }
@@ -1181,7 +1183,7 @@ button.close {
       min-height: 305px;
 }
 .banner13 {
-    background: url(../images/13.JPG) no-repeat 0px 0px;
+    background: url(../images/13.jpg) no-repeat 0px 0px;
     background-size:cover;
     -webkit-background-size: 100% 100%;
     -moz-background-size: cover;
@@ -1293,6 +1295,18 @@ button.close {
 
 /*-- stats-bottom --*/
 .agileinfo_services_grid1{
+	text-align: center;
+	width: 320px;
+	height: 250px;
+	padding:2em;
+	background:#f5f5f5;
+	position:relative;
+	    border: 1px solid #e4e5e6;
+}
+.agileinfo_services_grid2{
+	text-align: center;
+	width: 350px;
+	height: 350px;
 	padding:2em;
 	background:#f5f5f5;
 	position:relative;
@@ -2715,7 +2729,7 @@ h3.agileinfo_sign  {
 	.stats {
 		min-height: 430px;
 		text-align: center;
-		background: url(../images/banner.jpg) no-repeat 0px 0px;
+		background: url(../images/shuzi.jpg) no-repeat 0px 0px;
 	}
 	.w3layouts_stats_left {
 		padding: 3.5em 0 0em 0;
