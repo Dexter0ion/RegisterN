@@ -147,7 +147,7 @@ app.post('/regis', function (req, res) {
         console.log(result);
         console.log('\n');
 
-        res.render('index', { title: 'Express' });
+        res.render('success', { title: 'Express' });
       });
     };
 

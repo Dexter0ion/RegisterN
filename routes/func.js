@@ -12,5 +12,8 @@ router.get('/regisTable.html', function(req, res) {
   res.render('regisTable', { title: '报名' });
 });
 
+router.get('/success.html',function(req,res){
+  res.render('success',{title:'报名成功'});
+})
 
 module.exports = router;
